@@ -7,3 +7,6 @@ body{
   height: 100vh;
   box-sizing: border-box;
 }
+.app img{
+  width: 20vw;
+}
