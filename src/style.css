@@ -1,12 +1,20 @@
-body{
-    margin: 0;
-    padding: 0;
+@font-face {
+  font-family: "opsr";
+  src: url("../assets/fonts/OpenSans-Regular.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "opsr", sans-serif;
+  font-size: 1.2em;
 }
 .app {
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
 }
-.app img{
+.app img {
   width: 20vw;
 }
