@@ -1,8 +1,15 @@
 const path = require("path");
+const htmlwebpackplugin = require("html-webpack-plugin");
 module.exports = {
-  entry: "./src/index.js",
+  entry: { app: "./src/index.js", product: "./src/services/products.js" },
+  plugins: [
+    new htmlwebpackplugin({
+      title: "Furniture Application",
+      template: "./index.html"
+    })
+  ],
   output: {
-    filename: "bundle.js",
+    filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist")
   },
   module: {
