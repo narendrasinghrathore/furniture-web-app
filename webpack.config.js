@@ -2,9 +2,10 @@ const path = require("path");
 const htmlwebpackplugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = {
+  mode: "development",
   entry: { app: "./src/index.js", product: "./src/services/products.js" },
   plugins: [
-    new CleanWebpackPlugin(),// clean dist folder on new build
+    new CleanWebpackPlugin(), // clean dist folder on new build
     new htmlwebpackplugin({
       title: "Furniture Application",
       template: "./index.html"
