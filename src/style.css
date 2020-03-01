@@ -18,3 +18,21 @@ body {
 .app img {
   width: 20vw;
 }
+.ul {
+  margin: 0;
+  padding: 0;
+}
+.li {
+  list-style: none;
+  display: flex;
+  box-sizing: content-box;
+  box-shadow: 0 2px 2px 2px #dedede;
+  width: 90vw;
+  padding: 10px;
+  height: 150px;
+  border-radius: 3px;
+  margin: 10px auto;
+}
+.li img {
+  height: 90%;
+}

@@ -3,7 +3,10 @@ const htmlwebpackplugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 module.exports = {
   mode: "development",
-  entry: { app: "./src/index.js", product: "./src/services/products.js" },
+  entry: {
+    app: "./src/index.js",
+    products: "./src/components/products/products.js"
+  },
   devtool: "inline-source-map",
   devServer: {
     contentBase: "./dist"
@@ -15,6 +18,9 @@ module.exports = {
       template: "./index.html"
     })
   ],
+  // resolve: {
+  //   extensions: [".tsx", ".ts", "js"]
+  // },
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist")
@@ -25,6 +31,11 @@ module.exports = {
         test: /\.css$/,
         use: ["style-loader", "css-loader"]
       },
+      // {
+      //   test: /\.tsx?$/,
+      //   use: "ts-loader",
+      //   exclude: /node_modules/
+      // },
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: ["file-loader"]
